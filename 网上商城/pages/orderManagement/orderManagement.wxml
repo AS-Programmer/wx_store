@@ -1,0 +1,32 @@
+<view class='main'>
+	<view class='tab'>
+		<view bindtap='tabFun' data-index="{{1}}">
+			<text class='{{tabIndex==1?"active":""}}'>待发货</text>
+		</view>
+		<view bindtap='tabFun' data-index="2">
+			<text class='{{tabIndex==2?"active":""}}'>已发货</text>
+		</view>
+	</view>
+	<view>
+		<view class='top' style='height:8vh'>
+			<view class="goodsNum">
+				<text wx:if="{{tabIndex == 1}}">待发货：<text style="float: right;">共 <text style="color:red;">{{goodsNum}}</text> 件</text></text>
+				<text wx:if="{{tabIndex == 2}}">已发货：<text style="float: right;">共 <text style="color:red;">{{goodsCount}}</text> 件</text></text>
+			</view>
+		</view>
+	</view>
+	<scroll-view scroll-y class='list'>		
+		<view class='item' wx:for="{{list}}" wx:key="index">
+			<navigator class='content' hover-class="none" url="/pages/details/details?id={{item.goods_id}}">
+				<image src='{{item.img}}'></image>
+				<view class='text'>		
+					<view class='title'>{{item.title}}</view>
+          <view class="orderNo" wx:if="{{send == false}}">订单编号：{{item.orderNo}}</view>
+          <view class='num'>共 <text style="color:red;">{{item.num}}</text> 件商品</view>
+				</view>
+			</navigator>
+      <button wx:if="{{send}}" size="mini" bindtap="sendGoodsFun" data-id="{{item._id}}">立即发货</button>
+			<view wx:else style="color:red;">已发货</view>
+		</view>
+	</scroll-view>
+</view>

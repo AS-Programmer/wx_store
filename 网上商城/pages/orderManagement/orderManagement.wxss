@@ -1,0 +1,118 @@
+
+.main{
+  height: 100vh;
+}
+
+.tab{
+  height: 7vh;
+  display: flex;
+  line-height: 7vh;
+}
+
+.tab view{
+  flex: 1 0 auto;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+}
+.tab .active{
+  color: #ff5f19;
+  border-bottom: 1px solid #ff5f19;
+  padding-bottom:1.8vh;
+}
+
+.list{
+  height: 84.7vh;
+}
+
+.list .item{
+  display: flex;
+  border-bottom: 1px solid #EDEDED;
+  padding: 0 16px;
+  height: 95px;
+  align-items: center;
+}
+
+.list .label{
+  flex: 0 0 auto;
+  padding:10px 0;
+}
+
+.list .content{
+  flex-grow: 1;
+  display:flex;
+}
+
+.list .content image{
+  flex: 0 0 auto;
+  height: 76px;
+  width: 76px;
+  padding-right:10px;
+}
+
+.list .content .text{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  font-size: 14px;
+  flex-direction: column;
+}
+
+.list .content .num{
+  overflow: hidden;
+}
+
+.list .content .title{
+  /* margin-bottom: 30rpx; */
+  font-size: 16px;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 24px;    
+  max-height: 24px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.list .content .address{
+  overflow: hidden;
+}
+.list .content .orderNo{
+  font-size: 12px;
+}
+.item button{
+  background-color: #ff5f19;
+  color: white;
+}
+.top{
+  display: flex;
+  line-height: 44px;
+  border-top: 1px solid #EDEDED;
+  border-bottom: 1px solid #EDEDED;
+  font-size: 14px;
+  padding: 0 16px;
+  align-items: center;
+}
+
+.top .city{
+  padding-left: 30px;
+  color: #999;
+}
+
+.top .edit-btn{
+  color: #6EA1F5;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top .goodsNum{
+  flex: 6;
+}
+
+.top button {
+  background-color: transparent;
+  text-align: center;
+  flex: 1;
+  font-size: 12px;
+}

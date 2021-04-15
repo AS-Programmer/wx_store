@@ -1,0 +1,212 @@
+.main {
+  height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+}
+
+.top {
+  display: flex;
+  line-height: 44px;
+  border-top: 1px solid #EDEDED;
+  border-bottom: 1px solid #EDEDED;
+  font-size: 14px;
+  padding: 0 16px;
+  align-items: center;
+}
+
+.top .edit-btn {
+  color: #6EA1F5;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top .sortType {
+  flex: 6;
+}
+
+
+.top button {
+  background-color: transparent;
+  text-align: center;
+  flex: 1;
+  font-size: 12px;
+}
+
+.btn {
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+  background: #ff5f19;
+  font-size: 14px;
+  color: #fff;
+  bottom: 0px;
+}
+
+/* // */
+.item {
+  height: 10vh;
+  line-height: 10vh;
+  display: flex;
+  width: 96%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item .text {
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+.item .btn_item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item .btn_item view:nth-child(1) {
+  margin-right: 0px;
+  line-height: 59.5px;
+  width: 70px;
+  background: #ff5f19;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.item .btn_item view:nth-child(2) {
+  margin-right: 0px;
+  line-height: 59.5px;
+  width: 70px;
+  background: green;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+/* s商品列表 */
+.list {
+  height: 84.7vh;
+}
+
+.label {
+  width: 20px;
+  height: 20px;
+}
+
+.label image {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.list .item {
+  display: flex;
+  border-bottom: 1px solid #EDEDED;
+  padding: 0 16px;
+  height: 118px;
+  align-items: center;
+}
+
+.list .label {
+  flex: 0 0 auto;
+  padding: 10px 0;
+}
+
+.list .content {
+  flex-grow: 1;
+  height: 119px;
+  display: flex;
+}
+
+.list .content image {
+  flex: 0 0 auto;
+  height: 94px;
+  width: 94px;
+  padding: 10px;
+}
+
+.list .content .text {
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.list .content .title {
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+}
+
+.list .content .spec {
+  font-size: 12px;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 24px;
+  max-height: 24px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.list .content .price {
+  height: 40px;
+  display: flex;
+  line-height: 40px;
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+.list .content .price text:nth-child(1) {
+  color: #ff5f19;
+  flex: 1 0 50%;
+}
+
+.list .content .price text:nth-child(2) {
+  color: #999999;
+  flex: 1 0 50%;
+  /* text-align: right; */
+  right: 5px;
+}
+
+.inputF input {
+  width: 280px;
+  line-height: 34px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  margin:10px 0 10px 0;
+  height: 2rem;
+  min-height: 1rem;
+  text-align: center;
+}
+.inputF textarea {
+  width: 280px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  margin:10px 0 10px 0;
+  text-align: center;
+}
+.inputF image{
+  width: 282px;
+  height: 282px;
+}
+.inputF .picker{
+  width: 280px;
+  line-height: 34px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  margin:10px 0 10px 0;
+  height: 2rem;
+  min-height: 1rem;
+  text-align: center;
+}
+/* .inputF view {
+  width: 280px;
+  line-height: 34px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  margin:10px 0 10px 0;
+  height: 2rem;
+  min-height: 1rem;
+  text-align: center;
+} */

@@ -1,0 +1,32 @@
+<view class='main'>
+	<view class='top' style='height:7vh'>
+		<view class="sortType">
+			<text>分类管理</text>
+		</view>
+		<button wx:if="{{!isEdit}}" size="mini" class='edit-btn' bindtap='editFun'>编辑</button>
+		<button wx:else class='edit-btn' size="mini" bindtap='editFun'>完成</button>
+	</view>
+	<scroll-view scroll-y class='list'>
+		<view class='item' wx:for="{{list}}" wx:key="index">
+			<view class='text'>
+				<text>{{item.title}}</text>
+			</view>
+			<view class="btn_item" wx:if="{{isEdit}}">
+				<button size="default" bindtap="delSortFun" data-id="{{item._id}}">删除</button>
+				<button size="default" bindtap="updSortFun" data-id="{{item._id}}">修改</button>
+			</view>
+		</view>
+	</scroll-view>
+	<view bindtap="addSortFun" class='btn'>
+		新增分类
+	</view>
+</view>
+
+
+<modal hidden="{{hiddenmodalput}}" title="请输入新的分类名称" confirm-text="修改" cancel-text="取消" bindcancel="modalinput" bindconfirm="confirm">
+	<input type="text" bindinput="newSortName" placeholder="{{sort}}"></input>
+</modal>
+
+<modal hidden="{{hiddeNewSort}}" title="请输入新的分类名称" confirm-text="确认" cancel-text="取消" bindcancel="modalinput" bindconfirm="addSort">
+	<input type="text" bindinput="newsortname" placeholder="请输入分类名称"></input>
+</modal>

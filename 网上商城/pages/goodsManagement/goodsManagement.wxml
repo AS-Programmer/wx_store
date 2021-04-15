@@ -1,0 +1,61 @@
+<view class='main'>
+	<view class='top' style='height:7vh'>
+		<view class="sortType">
+			<text>在售商品：</text>
+			<text>共 <text style="color:red;">{{totalNum}}</text> 件</text>
+		</view>
+		<button wx:if="{{!isEdit}}" size="mini" class='edit-btn' bindtap='editFun'>编辑</button>
+		<button wx:else class='edit-btn' size="mini" bindtap='editFun'>完成</button>
+	</view>
+
+
+	<scroll-view scroll-y class='list'>
+		<view class='item' wx:for="{{list}}" wx:key="index">
+			<navigator class='content' hover-class="none" url="/pages/details/details?id={{item._id}}">
+				<image src='{{item.img}}'></image>
+				<view class='text'>
+					<view class='title'>{{item.title}}</view>
+					<view class='spec'>{{item.spec}}</view>
+					<view class='price'>
+						<text>¥{{item.price}}</text>
+						<text wx:if='{{!isEdit}}'>类别：{{item.sort}}</text>
+					</view>
+				</view>
+			</navigator>
+			<view class="btn_item" wx:if="{{isEdit}}">
+				<view bindtap="delGoodsFun" data-id="{{item._id}}">下架</view>
+				<view bindtap="updGoodsFun" data-id="{{item._id}}">修改</view>
+			</view>
+		</view>
+	</scroll-view>
+	<view bindtap="addGoodsFun" class='btn'>
+		上架新商品
+	</view>
+</view>
+
+
+<modal class="inputF" hidden="{{hiddenmodalput}}" title="请更改商品信息" confirm-text="确认" cancel-text="取消" bindcancel="modalinput" bindconfirm="updGoods">
+	<image mode="aspectFill" src="{{imgSrc}}" bindtap="newImgInput"></image>
+	<input type="text" bindinput="newTitleInput" placeholder="{{goodsName}}"></input>
+	<input type="number" bindinput="newPriceInput" placeholder="{{goodsPrice}}"></input>
+	<textarea auto-height type="text" bindinput="newSpecInput" placeholder="{{goodsSpec}}"></textarea>
+	<!-- <input type="select" bindtap="selectSortFun" bindinput="newsortname" placeholder="请选择商品分类"></input> -->
+	<picker mode="selector" range-key="{{'title'}}" range="{{sortList}}" value="{{sortList.title}}" bindchange="bindPickerSelectSort">
+		<view class="picker">
+			{{sortSelect}}
+		</view>
+	</picker>
+</modal>
+
+<modal class="inputF" hidden="{{hiddeNewGoods}}" title="请输入商品信息" confirm-text="确认" cancel-text="取消" bindcancel="modalinput" bindconfirm="addGoods">
+	<image mode="aspectFill" src="{{imgSrc}}" bindtap="newImgInput"></image>
+	<input type="text" bindinput="newTitleInput" value="{{goodsName}}"></input>
+	<input type="number" bindinput="newPriceInput" value="{{goodsPrice}}"></input>
+	<textarea auto-height type="text" bindinput="newSpecInput" value="{{goodsSpec}}"></textarea>
+	<!-- <input type="select" bindtap="selectSortFun" bindinput="newsortname" placeholder="请选择商品分类"></input> -->
+	<picker mode="selector" range-key="{{'title'}}" range="{{sortList}}" value="{{sortList.title}}" bindchange="bindPickerSelectSort">
+		<view class="picker">
+			{{sortSelect}}
+		</view>
+	</picker>
+</modal>

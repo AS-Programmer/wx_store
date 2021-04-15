@@ -1,0 +1,190 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": false,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": false,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.14.0",
+	"appid": "wx1ef21bc067ae646a",
+	"projectname": "%E7%BD%91%E4%B8%8A%E5%95%86%E5%9F%8E",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单查询",
+					"pathName": "pages/orderQuery/orderQuery",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收货地址管理",
+					"pathName": "pages/addressList/addressList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新增收货地址",
+					"pathName": "pages/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "我的订单",
+					"pathName": "pages/orderDetails/orderDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "后台登录",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "商城后台管理",
+					"pathName": "pages/admin/admin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "我的订单",
+					"pathName": "pages/orderDetails/orderDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/details/details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "分类",
+					"pathName": "pages/classify/classify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的收藏",
+					"pathName": "pages/collection/collection",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单后台管理",
+					"pathName": "pages/orderManagement/orderManagement",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类后台管理",
+					"pathName": "pages/sortManagement/sortManagement",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品管理后台",
+					"pathName": "pages/goodsManagement/goodsManagement",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

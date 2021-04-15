@@ -1,0 +1,74 @@
+/**分类栏**/
+
+.jdheader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #ccc;
+  padding-top: 5px;
+}
+.jdsearch {
+  width: 95%;
+  height: 42px;
+  line-height: 45px;
+  border-radius: 35px;
+  margin-bottom: 10px;
+  background: #fff;
+  font-size: 15px;
+  color: #ccc;
+  font-family: "微软雅黑";
+  text-align: center;
+}
+/*  */
+.left-navbar{
+  position:absolute;
+  left:0;
+  width:25%;
+  height:90%;
+  background-color:#eee;
+  font-size:15px;
+}
+.left-navbar view{
+  height:80rpx;
+  line-height: 80rpx;
+  text-align:center;
+}
+.active{
+  background-color:#FFF;
+  color:red;
+  font-size:17px;
+}
+#right{
+  position:absolute;
+  right:0;
+  width:75%;
+  height:90%;
+}
+.img-banner{
+  height:150rpx;
+  width:100%;
+}
+.goods-list{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:30rpx;
+}
+.goods-title{
+  width:100%;
+  font-size:15px;
+  font-weight:bold;
+  padding-left:10rpx;
+}
+.goods{
+  width:150rpx;
+  font-size:14px;
+  margin:15rpx;
+  text-align:center;
+}
+.img{
+  width:140rpx;
+  height:140rpx;
+}

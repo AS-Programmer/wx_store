@@ -1,0 +1,74 @@
+.top{
+  height: 40vh;
+  border-bottom: 3px solid #dedede;
+  background: #06afa7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .top .content{
+   text-align: center;
+ }
+ .top .img{
+   border: 10rpx solid rgba(0,0,0, 0.1);
+   width: 80px;
+   height: 80px;
+   overflow: hidden;
+   border-radius: 50%;
+ }
+ 
+ .top .text{
+   text-align: center;
+   font-size: 14px;
+   color: #333333;
+ }
+ 
+ .menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+
+.menu-item {
+  align-items: center;
+  width: 33%;
+  height: 200rpx;
+  display: flex;
+  color: rgb(36, 34, 34);
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px rgb(248, 245, 245) solid;
+  border-bottom: 1px rgb(248, 245, 245) solid;
+  box-sizing: border-box;
+}
+
+.menu-item .iconfont {
+  width: 50%;
+  height: 50%;
+  margin-bottom: 40rpx;
+}
+
+.menu-item text {
+  font-size: 16px;
+}
+
+.top .btn{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.top .btn button{
+  margin-top: 10px;
+}
+
+.updPassword input{
+  width: 280px;
+  line-height: 34px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  margin:10px 0 10px 0;
+  height: 2rem;
+  min-height: 1rem;
+  text-align: center;
+}
+

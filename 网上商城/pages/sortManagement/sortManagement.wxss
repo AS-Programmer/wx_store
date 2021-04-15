@@ -1,0 +1,75 @@
+.main{
+  height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+}
+.top{
+  display: flex;
+  line-height: 44px;
+  border-top: 1px solid #EDEDED;
+  border-bottom: 1px solid #EDEDED;
+  font-size: 14px;
+  padding: 0 16px;
+  align-items: center;
+}
+
+.top .edit-btn{
+  color: #6EA1F5;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top .sortType{
+  flex: 6;
+}
+
+
+.top button {
+  background-color: transparent;
+  text-align: center;
+  flex: 1;
+  font-size: 12px;
+}
+
+.btn{
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+  background:#ff5f19;
+  font-size: 14px;
+  color: #fff;
+  bottom: 0px;
+}
+
+/* // */
+.list{
+  height: 84.7vh;
+}
+.item{
+  height: 10vh;
+  line-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.item .text{
+  font-size: 16px;
+  margin-left: 15px;
+}
+.item .btn_item{
+  display: flex;
+  flex-direction: column;
+}
+.item .btn_item button:nth-child(1){
+  color: white;
+  line-height: 2.5vh;
+  background-color: red;
+}
+.item .btn_item button:nth-child(2){
+  color: white;
+  line-height: 2.5vh;
+  background-color: rgb(0, 255, 0);
+}
+

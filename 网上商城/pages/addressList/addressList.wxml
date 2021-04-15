@@ -1,0 +1,25 @@
+<view style='height:100vh;'>
+	<scroll-view scroll-y style='height:92vh;'>
+		<view class='list'>
+
+			<view class='item' wx:for="{{list}}" wx:key="index">
+				<view class='left'>
+					<view>{{item.mobilephone}} {{item.username}} 收</view>
+					<view>{{item.address}}</view>
+				</view>
+				<navigator hover-class="none" url="/pages/addressAdd/addressAdd?city={{item.region[0]}},{{item.region[1]}},{{item.region[2]}}&mobile={{item.mobilephone}}&name={{item.username}}&detailed={{item.detailed}}&id={{item._id}}&checked=1" class='edit'>
+					<image src='/images/edit.png'></image>
+				</navigator>
+				<view class='choice' wx:if="{{item._id != id}}" bindtap='defaultFun' data-item="{{item}}">
+					<image src='/images/choice_n.png'></image>
+				</view>
+				<view class='choice' wx:else>
+					<image src='/images/choice_y.png'></image>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+	<navigator url="/pages/addressAdd/addressAdd" class='btn'>
+		新增收货地址
+	</navigator>
+</view>

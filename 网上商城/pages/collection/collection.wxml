@@ -1,0 +1,58 @@
+<scroll-view style='height:100vh'>
+  <view class='top' style='height:8vh'>
+   <text>共 <text style="color:red;">{{totalNum}}</text> 件商品</text>
+   <button wx:if="{{!isEdit}}" class='edit-btn' bindtap='editFun'>编辑</button>
+   <button wx:else class='edit-btn' bindtap='editFun'>完成</button>
+  </view>
+  <scroll-view scroll-y class='list' style='height:82vh'>
+    <view class='item' wx:if="{{!isEdit}}" wx:for="{{list}}" wx:key="index">
+      <view wx:if="{{isEdit}}" class='label' bindtap="labelFun" data-id="{{item._id}}">
+        <image wx:if="{{item.select}}" src='/images/choice_y.png'></image>
+        <image wx:else src='/images/choice_n.png'></image>
+      </view>
+      <navigator class='content' hover-class="none" url="/pages/details/details?id={{item.goods_id}}">
+        <image src='{{item.img}}'></image>
+        <view class='text'>
+          <view class='title'>{{item.title}}</view>
+          <view class='spec'>{{item.spec}}</view>
+          <view class='price'>
+            <text>¥{{item.price}}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class='item edit' wx:if="{{isEdit}}"  wx:for="{{list}}" wx:key="index">
+      <view class='label' bindtap="labelFun" data-id="{{item.goods_id}}" wx:if="{{isEdit}}">
+        <image wx:if="{{item.select}}" src='/images/choice_y.png'></image>
+        <image wx:else src='/images/choice_n.png'></image>
+      </view>
+      <view class='content'>
+        <image src='{{item.img}}'></image>
+        <view class='text'>
+          <view class='title'>{{item.title}}</view>
+          <view class='spec'>{{item.spec}}</view>
+          <view class='price'>
+            <text>¥{{item.price}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='del-btn' bindtap='delCollectionItemFun' data-id="{{item.goods_id}}" data-item="{{item}}">
+        取消收藏
+      </view>
+    </view>
+  </scroll-view>
+  <view class='bottom' style='height:10vh' wx:if="{{isEdit}}">
+    <view class='left'>
+      <view class='text'>
+        <view class='label' style='padding-left:16px;' bindtap='totalFun'>
+          <image wx:if="{{total}}" src='/images/choice_y.png'></image>
+          <image wx:else src='/images/choice_n.png'></image>
+        </view>
+        <text bindtap='totalFun' style='padding-left:10px;'>全选</text>
+      </view>
+    </view>
+    <button class="delCollection" size="mini" bindtap="delCollectionFun">
+      取消收藏
+    </button> 
+  </view>
+</scroll-view>

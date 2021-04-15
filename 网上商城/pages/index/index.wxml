@@ -1,0 +1,70 @@
+<scroll-view bindscrolltolower="scrollToLower" style="height: 100vh;" class='scroll_container' scroll-y='true' bindscroll='scroll'>
+	<view class='top_bar'>
+		<view class='top_bar_bg' style='opacity:{{topBarOpacity}}'></view>
+		<view class='container'>
+			<view class='search' bindtap="searchFun">
+				<image class='logo' src='../../images/jd.png'></image>
+				<image class='search_icon' src='../../images/search.png'></image>
+				<!-- <input type='search' placeholder='魅族16超级新品日 旗舰首发' value='{{searchKey}}' bindconfirm='search'></input> -->
+				<view class='searchNews'>
+					<swiper class='items' autoplay='true' interval='2000' circular='true' vertical='true'>
+						<swiper-item class='item' wx:for='{{searchNewsList}}' wx:key='index'>{{item}}</swiper-item>
+					</swiper>
+				</view>
+			</view>
+			<!-- <view class='register' bindtap='register'>注册</view> -->
+		</view>
+	</view>
+
+	<swiper class='banner' indicator-dots='true' indicator-active-color='#fff' autoplay='true' circular='true'>
+		<swiper-item wx:for='{{swiperImage}}' wx:key='index' data-searchid='{{item.searchId}}' bindtap='swiperClick'>
+			<image mode='aspectFill' src='{{item.image}}'></image>
+		</swiper-item>
+	</swiper>
+
+	<!-- <view class='activity'>
+    <image src='{{activityImage}}'></image>
+  </view> -->
+
+	<view class='top_nav'>
+		<view class='top_nav_item' wx:for='{{topNavImage}}' wx:key='index'>
+			<image src='{{item.image}}'></image>
+			<view class='text'>{{item.text}}</view>
+		</view>
+	</view>
+
+	<view class='news'>
+		<image src='{{news.image}}'></image>
+		<swiper class='items' autoplay='true' interval='2000' circular='true' vertical='true'>
+			<swiper-item class='item' wx:for='{{news.items}}' wx:key='index'>{{item}}</swiper-item>
+		</swiper>
+		<view class='more'>更多</view>
+	</view>
+
+	<!-- <view class='secondKill'>
+    <view class='title'>京东秒杀</view>
+    <view class='time'>10点场</view>
+    <view class='countDown'>{{time}}</view>
+    <view class='more'>更过秒杀</view>
+  </view> -->
+
+	<!-- <view class='index_bottom_demo'>
+		<image src='../../images/index_bottom_demo.png'></image>
+	</view> -->
+	<view class="goods-list" wx:key="unique">
+		<!-- <view class="goods-title">{{item.title}}</view> -->
+		<view wx:for="{{goodsList}}" class="goods" wx:key="unique" bindtap="ToDetailsResult" id="{{item._id}}" data-id="{{item._id}}">
+			<image class="img" src="{{item.img}}" mode="acpectFill"></image>
+			<text>{{item.title}}</text>
+			<text style="color:red;">\n ￥{{item.price}}</text>
+		</view>
+	</view>
+
+	<view class="weui-loadmore" hidden="{{loading}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+		<view wx:if="{{noMore}}">没有更多了</view>
+  </view>
+</scroll-view>
+
+ 

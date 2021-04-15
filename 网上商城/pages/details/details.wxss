@@ -1,0 +1,276 @@
+
+page {
+    background-color: #f3f3f3;
+}
+swiper {
+    display:block;
+    height:562rpx;
+    /* margin-top: 140rpx; */
+}
+.goods_content {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 30rpx 30rpx 0 30rpx;
+}
+.content {
+    width: 79%;
+    line-height: 1.6;
+}
+.goods_title {
+    font-size: 34rpx;
+}
+.goods_spec {
+    font-size: 24rpx;
+    color: #7f7f7f;
+}
+.goods_price {
+    font-size: 40rpx;
+    color: #c13431;
+    /*font-weight: bold;*/
+}
+.share {
+    flex-shrink: 0;
+    text-align: center;
+    margin-top: 20rpx;
+}
+.share image {
+  width: 45rpx;
+  height: 45rpx;
+}
+.icon-fenxiang {
+    color: #585858;
+ 
+}
+.fenxiang {
+    color: #585858;
+    font-size: 24rpx;
+}
+.message {
+    background: white;
+    padding: 0 20rpx;
+    margin-top: 20rpx;
+}
+.goods_message {
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2rpx solid #f3f3f3;
+}
+.image_text {
+    background: white;
+    padding: 20rpx;
+    margin-top: 20rpx;
+}
+.image_text_title {
+    text-align: center;
+ 
+}
+/*底部导航*/
+.footer_nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    height: 96rpx;
+    background: white;
+    border-top: 2rpx solid #f3f3f3;
+}
+.nav_list {
+    width: 14%;
+    text-align: center;
+    height: 90rpx;
+    line-height: 1.4;
+    margin-top: 4rpx;
+}
+.nav_list image {
+  width: 45rpx;
+  height: 45rpx;
+}
+.nav_name {
+    font-size: 24rpx;
+    color: #7d7d7d;
+}
+.goods_buy {
+    width: 29%;
+    text-align: center;
+    height: 96rpx;
+    line-height: 96rpx;
+    color: white;
+    font-size: 30rpx;
+}
+.add_cart {
+    background: #eded3b;
+}
+.now_buy {
+    background: #e72128;
+}
+.message .goods_message .right image{
+  width: 25rpx;
+  height: 40rpx;
+  right: 0px;
+}
+
+/* ---------------------分割-------------------------------------- */
+
+/*使屏幕变暗  */
+.commodity_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+    z-index: 1000;
+    color: #fff;
+  }
+  /*对话框 */
+  .commodity_attr_box {
+   
+    width: 94%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    background: #fff;
+    padding:20rpx 3%;
+  }
+   
+  .commImg{
+    position: absolute;
+    width:150rpx;
+    height:150rpx;
+    background:#fff;
+    border:1px solid #f5f5f5;
+    z-index: 12;
+    left: 20px;
+    top: -35px;
+    padding:20rpx;
+    border-radius: 20rpx;
+  }
+  .commImg image{
+    width:100%;
+    height:100%;
+  }
+   
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+   
+  .sku-price {
+    color: red;
+    position: relative;
+    left: 250rpx;
+    margin: 1rpx;
+  }
+  .sku-title {
+    position: relative;
+    left: 250rpx;
+    font-size: 12px;
+    margin: 1rpx;
+  }
+   
+  .line{
+    width: 95%;
+    height: 2rpx;
+    display: inline-block;
+    margin: 30rpx 0rpx 5rpx 0rpx;
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+   
+  .gg-title{
+   font-size: 15px;
+  }
+   
+  .gg text{
+    width:100rpx;
+    height:50rpx;
+    line-height:50rpx;
+    float:left;
+    background:#f2f2f2;
+    text-align: center;
+    margin:20rpx 0 0 26rpx;
+    font-size:12px;
+    border-radius: 5px;
+  }
+  .gg .active{
+    color:#fff;
+    background:#e64340;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .row .quantity-position {
+    position: absolute;
+    margin-top:5px;
+    right:50rpx;
+  }
+   
+  .btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .button-add{
+    width:50%;
+    border:0px;
+    background:#e72128;
+    color:#fff;
+    border-radius: 0px;
+  }
+  .button-buy{
+    width:50%;
+    background:#e72128;
+    color:#fff;
+    border-radius: 0px;
+  }
+  
+   
+  /*数量加减样式*/
+  /*主容器*/  
+  .stepper {  
+      width: 80px;  
+      height: 26px;  
+      /*给主容器设一个边框*/  
+      border: 1px solid #ccc;  
+      border-radius: 3px;  
+      margin:0 auto;  
+  }  
+    
+  /*加号和减号*/  
+  .stepper text {  
+      width: 19px;  
+      line-height: 26px;  
+      text-align: center;  
+      float: left;  
+  }  
+    
+  /*数值*/  
+  .stepper input {  
+    padding:0px;
+      width: 40px;  
+      height: 26px;  
+      float: left;  
+      margin: 0 auto;  
+      text-align: center;  
+      font-size: 12px;  
+      /*给中间的input设置左右边框即可*/  
+      border-left: 1px solid #ccc;  
+      border-right: 1px solid #ccc;  
+  }  
+    
+  /*普通样式*/  
+  .stepper .normal{  
+      color: black;  
+  }
+  .stepper .disabled{  
+    color: #ccc;  
+}

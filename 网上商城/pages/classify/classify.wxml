@@ -1,0 +1,56 @@
+<view class="jdheader">
+      <view class="nav" class="jdsearch" bindtap="searchgoods">搜索商品</view>
+</view>
+<view class="classify">
+  <!--分类导航栏-->
+  <scroll-view class='left-navbar' scroll-y="true">
+    <view wx:for="{{screenArray}}" class="{{ currentTab == index ? 'active' : '' }}" wx:key="unique"
+     bindtap="{{ currentTab != index ? 'navbarTap':'' }}" data-id="{{item._id}}"
+     id="{{index}}" data-screenId="{{item.screenId}}">{{item.title}}
+    </view>
+    <!-- <view>推介分类</view>
+    <view>手机产品</view>
+    <view>家居用品</view>
+    <view>食品酒水</view>
+    <view>生鲜果蔬</view>
+    <view>电脑办公</view>
+    <view>其他分类</view>
+    <view>其他分类</view>
+    <view>其他分类</view>
+    <view>其他分类</view>
+    <view>其他分类</view>
+    <view>其他分类</view>
+    <view>其他分类</view>
+    <view>其他分类</view>
+    <view>其他分类</view> -->
+  </scroll-view>
+ 
+  <scroll-view id="right" scroll-y="true" scroll-top="{{scrollTop}}">
+    <!--顶部图片-->
+    <!-- <view class="goods-banner">
+      <image class="img-banner" src="{{screenArray.top_img}}"
+       mode="aspectFill"></image> -->
+        <!-- src="{{childrenArray.showImageUrl}}"  wx:if="{{childrenArray.showImageUrl}}" -->
+    <!-- </view> -->
+    <!--商品展示-->
+    <view class="goods-list" wx:key="unique">
+      <!-- <view class="goods-title">{{item.title}}</view> -->
+      <view wx:for="{{childrenArray}}" class="goods" wx:key="unique" bindtap="ToSearchResult" id="{{item._id}}" data-id="{{item._id}}" >
+        <image class="img" src="{{item.img}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+ 
+    
+    <!-- <view class="goods-list">
+      <view class="goods-title">新鲜蔬菜</view>
+      <view class="goods">
+        <image class="img" src="../../img/prudoct1.jpg"></image>
+        <text>葵花籽清油</text>
+      </view>
+    </view> -->
+   
+ 
+  </scroll-view>
+ 
+</view>
